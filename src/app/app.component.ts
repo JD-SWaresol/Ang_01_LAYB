@@ -2,8 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `Hello Universe`,
+  styles: `
+    :host {
+      color: #a144eb;
+    }
+  `
 })
 export class AppComponent {
   title = 'Ang_01_LAYB';
