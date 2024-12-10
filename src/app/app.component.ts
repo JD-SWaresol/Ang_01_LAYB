@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `Hello Universe`,
+  template: `Hello {{ city }}, {{ 1 + 1 }}`,
   styles: `
     :host {
       color: #a144eb;
@@ -11,4 +11,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ang_01_LAYB';
+  city = 'San Francisco';
 }
