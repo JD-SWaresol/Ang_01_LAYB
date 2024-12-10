@@ -1,25 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-user',
-  template: `
-    Username: {{ username }}
-  `
-})
-
-export class UserComponent {
-  username = 'YoungTech'
-}
-
-@Component({
   selector: 'app-root',
   template: `
-    <section>
-      <app-user />
-    </section>
+    @if (isServerRunning){
+      <span>Yes, the server is running</span>
+    }
+    @else {
+      <span>No, the server is not running</span>
+    }
   `,
 })
 
 export class AppComponent {
   title = 'Ang_01_LAYB';
+  isServerRunning: boolean = true;
 }
