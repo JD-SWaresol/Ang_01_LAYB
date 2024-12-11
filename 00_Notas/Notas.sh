@@ -30,4 +30,36 @@
                     }
                 }
 
-# 
+
+# Component Communication with @Input
+
+    - Se usa cuando se requiere que se envien datos a un componente, los datos pueden ser usador para personalizar un componente.
+
+    - Aveces tambien se requiere el envio de informacion de un componente padre a un componente hijo.
+
+    - El concepto 'Input' es similar a 'props' en otros frameworks.
+
+    - Ejemplo de como se agrega una propiedad 'Input':
+
+        1.- Se agrega el imput dentro de un componente
+
+            class UserComponent {
+                @Input() occupation = '';
+            }
+
+        2.- Cuando se este listo para pasar los valores en un valor a traves de 'Input' los valores se pueden asignar a plantillas usando la sintaxis de atributos.
+
+            @Component({
+                ...
+                template: `<app-user occupation="Angular Developer"></app-user>`
+            })
+            class AppComponent {}
+
+        3.- Asegurate que la propiedad occupation esta en tu UserComponent
+
+            @Component({
+                ...
+                template: `<p>The user's occupation is {{occupation}}</p>`
+            })
+
+#

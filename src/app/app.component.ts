@@ -1,21 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
-    <!-- Debido a que vamos a desplazar el mouse, indicamos que este llamara a la funcion onMouseOver() --> 
-    <section (mouseover)="onMouseOver()">
-      This is my secret message:
-       {{ message }}
-    </section>
+    <app-user></app-user>
   `,
 })
 
 export class AppComponent {
-  message = '';
+  
+}
 
-  // Metodo que muestra el mensaje
-  onMouseOver() {
-    this.message = 'Way to go!!!';
-  }
+@Component({
+  selector: 'app-user',
+  template: `
+    <p>The user's name is {{ name }}</p>
+  `,
+})
+
+export class UserComponent {
+  @Input() name = 'Gerardo';
 }
