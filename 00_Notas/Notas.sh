@@ -12,4 +12,22 @@
 
                     + src: Estará vinculado a la propiedad de clase imageURL
 
+# Event Handling (Manipulación de Eventos)
+
+    - Permite funciones interactivas en aplicaciones web.
+
+    - Esto es usado para responder a acciones de usuario como presionar un botón, envios de formularios y más
+
+    - Vea el siguiente ejemplo:
+
+                @Component({
+                    ...
+                    template: `<button (click)="greet()">`
+                })
+                class AppComponent {
+                    greet() {
+                        console.log('Hello, there 👋');
+                    }
+                }
+
 # 
