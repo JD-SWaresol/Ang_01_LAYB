@@ -62,4 +62,11 @@
                 template: `<p>The user's occupation is {{occupation}}</p>`
             })
 
-#
+
+# Component Communication with @Output
+
+    - Este tipo de componente se usa cuando se requiere notificar a otros componentes que algo ha ocurrido.
+
+    - Notifica sobre eventos como botones presionados, elementos de listas eliminados o alguna cosa importante que haya ocurrido.
+
+    - En este tipo de escenarios los componentes necesitan comunicarse con los componentes padre.

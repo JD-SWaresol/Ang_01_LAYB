@@ -1,23 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
   template: `
-    <app-user></app-user>
+    <app-child (addItemEvent)="addItem($event)" />
+    <p>🐢 all the way down {{ items.length }}</p>
   `,
 })
 
 export class AppComponent {
-  
-}
+  items = new Array();
 
-@Component({
-  selector: 'app-user',
-  template: `
-    <p>The user's name is {{ name }}</p>
-  `,
-})
-
-export class UserComponent {
-  @Input() name = 'Gerardo';
+  addItem(item: string) {
+    this.items.push(item);
+  }
 }
