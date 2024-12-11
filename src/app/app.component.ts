@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  styleUrls: ['app.component.css'],
   template: `
-    @for (user of users; track user.id) {
-      <p>{{user.name}}</p>
-    }
+    <!-- Haciendo esta especificacion, ahora el div es editable -->
+    <div [contentEditable]="isEditable"></div>
   `,
 })
 
 export class AppComponent {
   title = 'Ang_01_LAYB';
-  users = [{id: 0, name: 'Sarah'}, {id: 1, name: 'Amy'}, {id: 2, name: 'Rachel'}, {id: 3, name: 'Jessica'}, {id: 4, name: 'Poornima'}];
+  isEditable = true;
 }
