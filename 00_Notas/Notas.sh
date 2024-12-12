@@ -70,3 +70,68 @@
     - Notifica sobre eventos como botones presionados, elementos de listas eliminados o alguna cosa importante que haya ocurrido.
 
     - En este tipo de escenarios los componentes necesitan comunicarse con los componentes padre.
+
+
+
+# Deferrable Views (Vistas aplazables)
+
+    - Este tipo de vistas son usadas para aplazar la carga de una sección de su plantilla de componentes.
+
+    - Las vistas aplazables son usadas en las situaciones en las que al tener muchos componentes con su respectiva referencia en la aplicacion, pero sin tener que cargarlo de forma inmediata.
+
+    - Ejemplo sobre como trabajar con Deferrable Views:
+    
+        1.- Genera un codigo basico de tipo '@defer'. En ese bloque se cargan los comentarios del componente 'comment'.
+
+            Al envolver comment Component con '@defer' se pospone la carga
+
+                @defer {  
+                    <comments />
+                }
+        
+        2.- Coloca un bloque '@placeholder' donde se coloca el HTML que se mostrara antes de que inicie la carga diferida (aplazable).
+
+            El contenido de '@placeholder' se carga con entusiasmo.
+
+                @defer {  
+                    <comments />
+                } @placeholder {  
+                    <p>Future comments</p>
+                }
+
+        3.- Coloca un bloque '@loading' en donde se colocará el contenido HTML que se va a mostrar mientras el contenido diferido (aplazable) se recupera activamente, pero aun no ha finzalizado.  
+
+                @defer {  
+                    <comments />
+                } @placeholder {  
+                    <p>Future comments</p>
+                } @loading {  
+                    <p>Loading comments...</p>
+                }
+
+        4.- Agregamos dentro de '@loading' un tiempo de duracion minimo para cargar el contenido de comment Components.
+
+            NOTA: También se puede agregar un tiempo minimo de duracion para '@placeholder'
+
+                @defer {  
+                    <comments />
+                } @placeholder {  
+                    <p>Future comments</p>
+                } @loading (minimum 2s) {  
+                    <p>Loading comments...</p>
+                }
+    
+        5.- Agregamos el Activador de Vista grafica (Viewport Trigger) para que el cotenido difiera la carga una vez que ingrese a la ventana gráfica.
+
+            Un Viewport trigger se usa mejor cuando se pospone contenido que esta lo suficientemente abajo en la página como para que sea necesario desplazarse para verlo.
+
+                @defer (on viewport) {  
+                    <comments />
+                }
+            El contenido se muestra cuando se hace scroll hacia abajo despues de tener mucha informacion.
+        
+
+
+    
+
+#     

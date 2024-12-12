@@ -3,12 +3,12 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChildComponent } from './child/child.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
