@@ -129,9 +129,12 @@
                     <comments />
                 }
             El contenido se muestra cuando se hace scroll hacia abajo despues de tener mucha informacion.
-        
 
+
+# Optimizing images (Optimizando imagenes)
+
+    - El tema de las imagenes puede ser un importante contribuyente para los problemas de rendimiento de las aplicaciones.
+
+    - Para evitar ser tan complejo, Angular maneja el tema de Optimizacion de imagenes con la directiva 'NGOpmizedImage'.
 
     
-
-#     
