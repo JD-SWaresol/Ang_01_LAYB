@@ -137,4 +137,11 @@
 
     - Para evitar ser tan complejo, Angular maneja el tema de Optimizacion de imagenes con la directiva 'NGOpmizedImage'.
 
+
+
+# Routing Overview (Ruteo Descripcion)
+
+
+    - El enrutamiento nos puede ayudar cuando se llega al punto donde una aplicacion requiere tener mas de una pagina.
+
     
