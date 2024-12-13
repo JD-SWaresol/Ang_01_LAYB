@@ -5,9 +5,9 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   template: `
     <nav>
-      <a href="/">Home</a>
+      <a routerLink="/">Home</a>
       |
-      <a href="/user">User</a>
+      <a routerLink="/user">User</a>
     </nav>
     <router-outlet />
   `,

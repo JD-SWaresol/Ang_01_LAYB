@@ -144,4 +144,12 @@
 
     - El enrutamiento nos puede ayudar cuando se llega al punto donde una aplicacion requiere tener mas de una pagina.
 
+
+# RouterLink for Navigation
+
+    - Este tipo de herramienta nos puede ayudar en el rendimiento de la vista al momento de cargar la pagina cuando tenemos mas de un modulo.
+
+    - Esto es util con paginas grandes con un contenido donde los usuarios necesitan volver a descargar los recursos nuevamente.
+
+    - Con 'routerLink' ya no es necesario volver a recargar toda la pagina una vez que se selecciona alguna ruta (Home/User)
     
