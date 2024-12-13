@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommentsComponent } from './comments/comments.component';
 import { UserComponent } from './user/user.component';
-import { NgOptimizedImage } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    RouterOutlet
   ],
   providers: [
     provideClientHydration()
