@@ -160,3 +160,18 @@
 
     - Existe dos tipos de forms: Template-Driven y Reactive.
 
+
+
+# Reactive Forms
+
+    - Se usan cuando se quiere gestionar formularios mediante programacion en lugar de depender unicamente de plantillas.
+
+    - Este tipo de formularios usan la clase FormControl para representar los controles del formulario (ejemplo, entradas).
+
+    - La clase FormGroup de Angular se usa para agrupar controles de formulario en un objeto util que hace el manejo de formularios grandes sea conveniente para desarrolladores.
+
+    - Cada 'FormGroup' debe ser asociado a una directiva [formGroup]
+
+    - Cada 'FormControl' debe estar asociado a una directiva 'formControlName' asignada a una propiedad correspondiente.
+
+    - ngSubmit es un evento de Angular que se usa para indicar el envio de la informacion de los elementos de un form

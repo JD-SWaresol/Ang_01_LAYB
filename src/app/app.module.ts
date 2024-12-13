@@ -7,7 +7,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { UserComponent } from './user/user.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     RouterOutlet,
     RouterLink,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
