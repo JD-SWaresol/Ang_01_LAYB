@@ -152,4 +152,11 @@
     - Esto es util con paginas grandes con un contenido donde los usuarios necesitan volver a descargar los recursos nuevamente.
 
     - Con 'routerLink' ya no es necesario volver a recargar toda la pagina una vez que se selecciona alguna ruta (Home/User)
-    
+
+
+# Forms Overview
+
+    - Los formularios permiten a la app aceptar entradas de informacion del usuario.
+
+    - Existe dos tipos de forms: Template-Driven y Reactive.
+

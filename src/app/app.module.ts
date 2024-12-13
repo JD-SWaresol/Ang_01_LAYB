@@ -7,6 +7,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { UserComponent } from './user/user.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
