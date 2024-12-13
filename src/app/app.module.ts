@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CommentsComponent } from './comments/comments.component';
 import { UserComponent } from './user/user.component';
 import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentsComponent,
-    UserComponent
+    UserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-home',
   template: `
-    <div>User Page</div>
+    <div>Home Page</div>
   `
 })
-export class UserComponent {
+export class HomeComponent {
+
 }
