@@ -175,3 +175,10 @@
     - Cada 'FormControl' debe estar asociado a una directiva 'formControlName' asignada a una propiedad correspondiente.
 
     - ngSubmit es un evento de Angular que se usa para indicar el envio de la informacion de los elementos de un form
+
+
+# Validating forms
+
+    - Se usan dentro del escenario en el que necesitamos validar que la informacion agregada por los usuarios dentro de los inputs sea correcta antes de enviarse.
+
+    - 'Validators' es una herramientra proporcionada por Angular para realizar las validaciones correspondientes dentro de los inputs.

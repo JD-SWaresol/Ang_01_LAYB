@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -12,20 +12,17 @@ import { FormGroup } from '@angular/forms';
       <label>Email
           <input type="email" formControlName="email" />
       </label>
-      <button type="submit">Submit</button>
+      <!-- Podemos determinar que este boton este desabilitado hasta que los campos tengan la información Valida 
+            para ellos indicamos que el form de la clase FormControl llamado 'profile.Form' sea valido -->
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
     </form>
-
-    <!-- Aqui la plantilla se actualiza en tiempo real, es decir muestra la informacion que se va capturando en los Inputs de Name e Email -->
-    <h2>Profile Form</h2>
-    <p>Name: {{ profileForm.value.name }}</p>
-    <p>Email: {{ profileForm.value.email }}</p>
   `,
 })
 
 export class AppComponent {
   profileForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl('')
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email])
   });
 
   handleSubmit(){
