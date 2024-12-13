@@ -139,10 +139,12 @@
 
 
 
+
 # Routing Overview (Ruteo Descripcion)
 
 
     - El enrutamiento nos puede ayudar cuando se llega al punto donde una aplicacion requiere tener mas de una pagina.
+
 
 
 # RouterLink for Navigation
@@ -154,11 +156,15 @@
     - Con 'routerLink' ya no es necesario volver a recargar toda la pagina una vez que se selecciona alguna ruta (Home/User)
 
 
+
+
 # Forms Overview
 
     - Los formularios permiten a la app aceptar entradas de informacion del usuario.
 
     - Existe dos tipos de forms: Template-Driven y Reactive.
+
+
 
 
 
@@ -177,8 +183,34 @@
     - ngSubmit es un evento de Angular que se usa para indicar el envio de la informacion de los elementos de un form
 
 
+
+
 # Validating forms
 
     - Se usan dentro del escenario en el que necesitamos validar que la informacion agregada por los usuarios dentro de los inputs sea correcta antes de enviarse.
 
     - 'Validators' es una herramientra proporcionada por Angular para realizar las validaciones correspondientes dentro de los inputs.
+
+
+
+
+# Dependecy Injection (DI)
+
+    - Esta es una de las caracteristicas mas poderosas del framework de Angular.
+    
+    - DI es la capacidad de Angular para proporcionar los recursos que necesita para una aplicacion en tiempo de ejecución.
+
+    - Una dependencia puede ser un servicio u otro recurso. 
+
+    - Ejemplo de un Servicio Inyectable:
+                  
+            @Injectable({    
+                providedIn: 'root'
+            })
+            class UserService {    
+                // methods to retrieve and return data
+            }
+
+        providedIn : Indica el scope al cual el recurso o servicio va a estar disponible. Al estar en 'root' el servicio esta disponible en toda la aplicacion
+
+# 
