@@ -1,15 +1,18 @@
-import { Component, inject } from '@angular/core';
-import { LowerCasePipe } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
-    {{ username | lowercase }}
+    <li>Number with "decimal" {{ num | number:"3.2-2" }}</li>
+    <li>Date with "date" {{ birthday | date: 'medium' }}</li>
+    <li>Currency with "currency" {{ cost | currency }}</li>
   `,
 })
 
 export class AppComponent {
   
-  username = 'yOunGTECh';
-    
+  num = 103.1234;
+  birthday = new Date(2023, 3, 2);
+  cost = 4560.34;
+
 }

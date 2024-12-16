@@ -266,6 +266,19 @@
             loudMessage = 'we think you are doing great!'
         }
 
+    - Existen varios opciones de configuracion para las PIPES.
+
+    - Para pasar parametros a un pipe use la siguiente sintaxis. Ejemplo:
+
+        template: `{{ date | date:'medium' }}`;
+
+    El resultado a lo anterior seria lo siguiente:
+
+        Jun 15, 2015, 9:43:11 PM.
+
+
+# 
+    
 
     
     

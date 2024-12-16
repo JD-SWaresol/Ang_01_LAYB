@@ -8,7 +8,7 @@ import { UserComponent } from './user/user.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LowerCasePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe, LowerCasePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,10 @@ import { LowerCasePipe } from '@angular/common';
     RouterLink,
     FormsModule,
     ReactiveFormsModule,
-    LowerCasePipe
+    LowerCasePipe,
+    DecimalPipe,
+    DatePipe,
+    CurrencyPipe
   ],
   providers: [
     provideClientHydration()
