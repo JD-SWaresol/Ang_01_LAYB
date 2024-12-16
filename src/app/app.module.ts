@@ -9,13 +9,15 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CurrencyPipe, DatePipe, DecimalPipe, LowerCasePipe } from '@angular/common';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentsComponent,
     UserComponent,
-    HomeComponent
+    HomeComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

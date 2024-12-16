@@ -249,7 +249,7 @@
 
     - Los PIPIES son funciones 'puras' que no provocan efectos secundarios.
 
-    - Se pueden crear PIPES personalizados.
+    - Se pueden crear PIPES personalizados y ajustarlos a las necesidades.
 
     - Angular cuenta con una serie de PIPES integradas utiles que se pueden importar y usar dentro de algun componente.
 
@@ -272,10 +272,29 @@
 
         template: `{{ date | date:'medium' }}`;
 
-    El resultado a lo anterior seria lo siguiente:
+        El resultado a lo anterior seria lo siguiente:
 
         Jun 15, 2015, 9:43:11 PM.
 
+
+    - Un PIPE es una clase de TypeScript con un decorador @Pipe. Ejemplo:
+
+        import {Pipe, PipeTransform} from '@angular/core';
+        
+        @Pipe({  
+            name: 'star',
+        })
+        export class StarPipe implements PipeTransform {  
+            transform(value: string): string {    
+                return `⭐️ ${value} ⭐️`;  
+            }
+        }
+
+        StarPipe: Acepta un valor de cadena y retorna esa cadena con iconos de estrella al rededor.
+
+        @Pipe: Es el nombre del decorador el cual sera usado en la plantilla.
+
+        transform: Es una funcion donde se va a trabajar la logica.
 
 # 
     
