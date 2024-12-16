@@ -9,13 +9,11 @@ import { CarService } from './services/car.service';
 })
 
 export class AppComponent {
-  // Hacemos la inyeccion del servicio el y este sera interpolado
-  carService = inject(CarService);
-
+  
   display = '';
 
-  constructor() {
-    // Guardamos dentro de display los autos listados y unidos por star    
+  // Actualizamos para hacer la inyeccion de la propiedad carService de la Clase CarService
+  constructor(private carService: CarService) {
     this.display = this.carService.getCars().join(' ⭐️ ');
   }
     

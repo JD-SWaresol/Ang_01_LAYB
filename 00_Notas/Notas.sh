@@ -224,6 +224,27 @@
 
 
 
-# 
+# Constructor-Based Dependency Injection (Inyeccion de Dependencias Basada en Constructor)
 
+    - inject(): Es una función de patron la cual es usada para saber si existe otro patron para inyectar recursos llamado 'Constructor-Based Dependency Injection'.
+
+    - Se tiene que especificar los recursos como parametros para la función 'constructor' de un componente. Permitiendo Angular la disposición de esos recursos para nuestros componentes.
+
+    - Ejemplo para inyectar servicios o recursos dentro de un Componente:  
+
+        @Component({...})
+        class PetCarDashboardComponent {    
+            constructor(private petCareService: PetCareService) {
+                 ...    
+            }
+        }
+
+        + private: Se hace uso de esta propiedad.
+        + petCareService: Es la propiedad que se va a usar de la clase
+        + PetCareService: Es la Clase inyectada.
+
+
+
+# 
+    
     
