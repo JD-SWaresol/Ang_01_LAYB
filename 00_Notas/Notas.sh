@@ -213,4 +213,17 @@
 
         providedIn : Indica el scope al cual el recurso o servicio va a estar disponible. Al estar en 'root' el servicio esta disponible en toda la aplicacion
 
+    - Angular cuenta con una función conveniente para la inyeccion de un servicio en un componente llamada 'inject()'.
+
+        Ejemplo de Inyeccion de servicio
+
+            @Component({...})
+            class PetCareDashboardComponent {    
+                petRosterService = inject(PetRosterService);
+            }
+
+
+
 # 
+
+    
