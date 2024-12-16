@@ -245,6 +245,28 @@
 
 
 
-# 
+# PIPIES (Tuberias)
+
+    - Los PIPIES son funciones 'puras' que no provocan efectos secundarios.
+
+    - Se pueden crear PIPES personalizados.
+
+    - Angular cuenta con una serie de PIPES integradas utiles que se pueden importar y usar dentro de algun componente.
+
+    - Ejemplo de PIPES:
+
+        import {UpperCasePipe} from '@angular/common';
+        
+        @Component({
+            ...    
+            template: `{{ loudMessage | uppercase }}`,    
+            imports: [UpperCasePipe],
+        })
+        class AppComponent {    
+            loudMessage = 'we think you are doing great!'
+        }
+
+
+    
     
     
